@@ -1,7 +1,19 @@
-#define __FUNCTIONS__
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 
-void menu();
+typedef struct
+{
+  int length;
+  int use_uppercase;
+  int use_lowercase;
+  int use_digits;
+  int use_symbols;
+} PasswordOptions;
 
-void newPassword();
+/* Caller owns the returned buffer and must free() it. Returns NULL if
+ * no character type was selected or length is invalid. */
+char *generatePassword(const PasswordOptions *options);
 
-char *generatePassword(int password_length);
+void runMenu(void);
+
+#endif

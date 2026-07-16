@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include "functions.h"
-#include <conio.h>
 
-int main(int argc, char const *argv[])
+int main(void)
 {
-  printf("Welcome!\n");
+  printf("Welcome to Password Generator!\n\n");
 
-  menu();
+  runMenu();
 
   return 0;
 }
